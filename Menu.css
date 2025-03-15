@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Chewy&display=swap');
+
+/* Menu Section Styles */
+.menu-section {
+    padding: 40px 20px;
+}
+
+.menu-title {
+    text-align: center;
+    font-size: 36px;
+    color: white;
+    background-color: rgba(203, 118, 150, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    font-family: 'Cherry Bomb One', cursive;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: rgba(189, 93, 119, 0.4);
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: rgba(189, 93, 119, 0.9);
+}
+
+.menu-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.menu-image:hover {
+    transform: scale(1.1);
+}
+
+.menu-details h3 {
+    font-size: 24px;
+    color: #fccc7d;
+    margin-bottom: 10px;
+    font-family: 'Cherry Bomb One', cursive;
+}
+
+.menu-details p {
+    font-size: 18px;
+    color: white;
+    line-height: 1.6;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .menu-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu-image {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Menu Overview Styles */
+.menu-overview {
+    text-align: center;
+    padding: 40px 0;
+    color: white;
+}
+
+.menu-categories {
+    display: flex; /* Use flexbox for horizontal layout */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping */
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+    gap: 20px; /* Add gap between items */
+    justify-content: center;
+}
+
+.category-item {
+    text-align: center;
+    display: inline-block; /* Allow horizontal arrangement */
+    flex-shrink: 0; /* Prevent items from shrinking */
+}
+
+.category-box {
+    font-family: 'Atma', serif;
+    color: white;
+    background-color: #4a0c24;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 0.5em;
+    display: inline-block;
+}
+
+.category-box img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.category-box h3 {
+    margin-top: 10px;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+.category-box p {
+    font-size: 0.7em;
+    color: white;
+    font-family: 'Atma', serif;
+    font-style: normal;
+}
+nav > ul > li > a:hover {
+    color: #fccc7d;
+}

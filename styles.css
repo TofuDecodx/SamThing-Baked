@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Montserrat:wght@700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background: url("Background.png") repeat;
+  overflow-x: hidden;
+}
+
+/* Header/Navbar */
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #cb7696;
+  display: flex;
+  align-items: center;
+  padding: 10px 40px;
+  z-index: 996; /* Ensure it's above other elements */
+}
+
+.logo {
+  height: 60px;
+  margin-right: auto;
+}
+
+nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+nav  > ul > li > a {
+  text-decoration: none;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+nav  > ul > li > a:hover {
+  text-decoration: none;
+  color: #fccc7d;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Active navbar link */
+nav ul li a.active {
+  color: #fccc7d;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  color: white;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10vw;
+}
+
+/* Big Curved Background */
+.hero::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 200vw;
+  height: 190vh;
+  background: #4a0c24;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+/* Hero Content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  flex: 1;
+  margin-top: -50px;
+  margin-left: 30px;
+}
+
+/* Larger Title */
+h1 {
+  font-size: 75px;
+  font-family: "Cherry Bomb One", cursive;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+/* Button Styles */
+.btn {
+  background: #efa1b6;
+  padding: 15px 30px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out; /* Smooth animation */
+}
+
+/* Enlarge & Change Color on Hover */
+.btn:hover {
+  transform: scale(1.1); /* Enlarge */
+  background: #bd5d77; /* Change color */
+  transition: 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Hero Icon */
+.hero-icon {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  width: 100%;
+  height: auto;
+  max-width: 450px;
+  object-fit: contain;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    height: auto;
+    padding-top: 50px;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 90%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  .buttons {
+    flex-wrap: wrap;
+  }
+
+  .hero-icon {
+    max-width: 400px;
+    margin-top: 20px;
+  }
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #bd5d77; /* Custom background color */
+  list-style: none;
+  padding: 5px 0; /* Reduced padding to make the box smaller */
+  margin: 0;
+  width: 130px; /* Reduced width */
+  text-align: center;
+  border-radius: 8px;
+  display: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Soft outline */
+}
+
+.dropdown-menu li {
+  padding: 6px 0; /* Reduced padding to fit within smaller box */
+}
+
+.dropdown-menu li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 6px 0;
+  transition: background 0.3s ease-in-out;
+}
+
+.dropdown-menu li a:hover {
+  background: #a04b65; /* Slightly darker hover color */
+  border-radius: 4px;
+}
+
+/* Show dropdown when hovering */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Extra space before footer */
+.footer-spacing {
+  height: 150px; /* Adjust to control how much scrolling is needed */
+}
+/* Dimmed Overlay (Affects Background & Navbar) */
+#popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dim effect */
+  display: none; /* Hidden by default */
+  z-index: 998; /* Behind popup but above everything else */
+}
+
+/* Dim Navbar when Popup Appears */
+.navbar.dimmed {
+  background: rgba(75, 12, 36, 0.8); /* Darker, semi-transparent */
+  transition: background 0.3s ease-in-out;
+}
+
+/* Greeting Popup */
+#greeting-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: white;
+  padding: 30px 25px 25px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: none; /* Hidden by default */
+  z-index: 1000;
+  border-radius: 0; /* Remove rounded edges */
+}
+
+/* Show Popup */
+#greeting-popup.show,
+#popup-overlay.show {
+  display: block;
+}
+
+/* Full-width Banner */
+#popup-banner {
+  background: #cb7696;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px;
+  text-align: center;
+  width: 420px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Close Button (Top Right) */
+#close-popup {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  z-index: 996;
+  transition: opacity 0.3s;
+}
+
+#close-popup:hover {
+  opacity: 0.7;
+}
+
+/* Popup Content */
+#greeting-popup h2 {
+  color: #4a0c24;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 50px; /* Adjusted to not overlap with the banner */
+}
+
+#greeting-popup p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Popup Button */
+#popup-btn {
+  background: #efa1b6;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  text-transform: uppercase;
+  transition: background 0.3s ease-in-out;
+}
+
+#popup-btn:hover {
+  background: #bd5d77;
+}
+/* Footer */
+footer {
+  background: #cb7696;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  position: relative;
+  width: 100%;
+}
+
+/* Footnote */
+.footnote {
+  font-style: italic;
+  font-size: 12px;
+  color: #fccc7d;
+  margin-top: 5px;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samthing Baked</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src="Name Large.png" alt="Samthing Baked Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li class="dropdown">
+                    <a href="Menu.html">Menu</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Menu.html#muffins">Muffins</a></li>
+                        <li><a href="Menu.html#classic-cookies">Classic</a></li>
+                        <li><a href="Menu.html#premium-cookies">Premium</a></li>
+                        <li><a href="Menu.html#breads-pastries">Pastries</a></li>
+                    </ul>
+                </li>
+                <li><a href="location.html">Locations</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Welcome to<br>Samthing Baked!</h1>
+            <div class="buttons">
+                <a href="Menu.html#menu" class="btn" id="menu-btn">Explore Our Menu</a>
+                <a href="contacts.html#contacts" class="btn" id="order-btn">Order Now</a>
+            </div>
+        </div>
+        <img src="Icon Large.png" alt="Cake Icon" class="hero-icon">
+    </section>
+
+    <!-- Extra Space Before Footer -->
+    <div class="footer-spacing"></div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Samthing Baked. All Rights Reserved.</p>
+            <p class="footnote">"Baking happiness, one bite at a time!"</p>
+        </div>
+    </footer>
+
+    <!-- Dimmed Background -->
+    <div id="popup-overlay"></div>
+
+    <!-- Greeting Popup -->
+    <div id="greeting-popup">
+        <button id="close-popup">&#10006;</button>
+        <div id="popup-banner">📍 Find Us!</div>
+        <h2>Wanna know where we are?</h2>
+        <p>Come visit us and grab some freshly baked treats!</p>
+        <button id="popup-btn">Visit Now</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

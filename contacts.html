@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contacts.css">
+</head>
+<body>
+
+  <header>
+    <img src="Name Large.png" alt="Samthing Baked Logo" class="logo">
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li class="dropdown">
+                <a href="Menu.html">Menu</a>
+                <ul class="dropdown-menu">
+                    <li><a href="Menu.html#muffins">Muffins</a></li>
+                    <li><a href="Menu.html#classic-cookies">Classic</a></li>
+                    <li><a href="Menu.html#premium-cookies">Premium</a></li>
+                    <li><a href="Menu.html#breads-pastries">Pastries</a></li>
+                </ul>
+            </li>
+            <li><a href="location.html">Locations</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
+        </ul>
+    </nav>
+</header>
+
+  <h1>Contact Us</h1>
+
+  <div class="social-links">
+    <a href="mailto:sales@stb-ph.com" class="circle-btn">
+      <img src="Gmail Logo.png" alt="Gmail">
+    </a>
+    <a href="https://www.facebook.com/samthingbaked/" target="_blank" class="circle-btn">
+      <img src="Facebook Logo.png" alt="Facebook">
+    </a>
+    <a href="https://www.instagram.com/samthingbaked?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="circle-btn">
+      <img src="Instagram Logo.png" alt="Instagram">
+    </a>
+  </div>
+
+  <!-- Contact Number Section -->
+  <div class="contact-number">
+    <p>Contact Number: <a href="tel:+639566044503"> 09566044503 / 09270647393</a></p>
+  </div>
+
+  <!-- Feedback Form -->
+  <div class="container">
+    <h2>Feedback Form</h2>
+    <form id="feedback-form">
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" name="first-name" required>
+        
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" name="last-name" required>
+        
+        <label for="contact">Contact Number</label>
+        <input type="tel" id="contact" name="contact" required>
+        
+        <label for="email">Gmail</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="feedback">Your Feedback</label>
+        <textarea id="feedback" name="feedback" rows="4" required></textarea>
+        
+        <button type="submit" class="submit">Submit Feedback</button>
+    </form>
+    <p id="success-message" class="hidden">Thank you for your feedback! 💖</p>
+  </div>
+
+  <div class="footer-spacing"></div>
+
+   <!-- Footer Section -->
+   <footer>
+    <div class="footer-content">
+        <p>&copy; 2025 Samthing Baked. All Rights Reserved.</p>
+        <p class="footnote">"Baking happiness, one bite at a time!"</p>
+    </div>
+</footer>
+
+  <script src="contacts.js"></script>
+
+</body>
+</html>

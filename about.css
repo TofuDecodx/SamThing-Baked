@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Montserrat:wght@700&family=Poppins:wght@300;400;500;600&display=swap'); 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('About\ .png') repeat;
+    position: relative;
+}
+
+/* Overlay to reduce background opacity */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* About Title Styling */
+.about-title {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #f8f6f4;
+    font-family: 'Cherry Bomb One', cursive;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Paragraph Styling */
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+    margin-top: -20px;
+    margin-bottom:20;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; 
+    color: #f7f3f2;
+}
+
+/* Image Styling */
+.larger-img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-bottom: 180px;
+}
+
+.largest-img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-bottom: 100px;
+}
+
+/* Header/Navbar */
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #cb7696;
+  display: flex;
+  align-items: center;
+  padding: 10px 40px;
+  z-index: 996; /* Ensure it's above other elements */
+}
+
+.logo {
+  height: 60px;
+  margin-right: auto;
+}
+
+nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+nav > ul > li > a:hover {
+  text-decoration: none;
+  color: #fccc7d;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Active navbar link */
+nav ul li a.active {
+  color: #fccc7d;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #bd5d77; /* Custom background color */
+  list-style: none;
+  padding: 5px 0; /* Reduced padding to make the box smaller */
+  margin: 0;
+  width: 130px; /* Reduced width */
+  text-align: center;
+  border-radius: 8px;
+  display: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Soft outline */
+}
+
+.dropdown-menu li {
+  padding: 6px 0; /* Reduced padding to fit within smaller box */
+}
+
+.dropdown-menu li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 6px 0;
+  transition: background 0.3s ease-in-out;
+}
+
+.dropdown-menu li a:hover {
+  background: #a04b65; /* Slightly darker hover color */
+  border-radius: 4px;
+}
+
+/* Show dropdown when hovering */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        padding: 20px;
+    }
+    p {
+        font-size: 1rem;
+    }
+    .about-title {
+        font-size: 2.5rem;
+    }
+    .larger-img {
+        max-width: 100%;
+    }
+}
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  background: #cb7696;
+  color: white;
+  text-align: center;
+  padding: 60px 0 20px 0;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  position: relative;
+  width: 100%;
+  margin-top: 50p;
+}
+
+/* Footnote */
+.footnote {
+  font-style: italic;
+  font-size: 12px;
+  color: #fccc7d;
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+}
